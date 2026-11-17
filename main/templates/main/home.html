@@ -1,0 +1,513 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>1UA BOXING — Бокс у Білогородці біля Києва | Для дітей і дорослих</title>
+    <meta name="description" content="1UA BOXING — боксерський клуб у Білогородці біля Києва. Групові та індивідуальні тренування з боксу для дітей від 6 років і дорослих. Запис на тренування.">
+
+<meta name="keywords" content="1UA BOXING, бокс Білогородка, бокс Київ, секція боксу Київ, бокс для дітей Київ, боксерський клуб Білогородка, групові тренування з боксу, індивідуальні тренування з боксу">
+
+    <link rel="stylesheet"
+          href="{% static 'main/css/style.css' %}?v=5">
+</head>
+
+<body>
+
+<!-- ОКНО ВЫБОРА СПОСОБА ЗАПИСИ -->
+<div id="signup-choice" class="signup-choice-overlay">
+
+    <div class="signup-choice-box">
+
+        <a href="#home" class="signup-choice-close">×</a>
+
+        <h2>Оберіть спосіб запису</h2>
+
+        <p>Як вам зручніше записатися на тренування?</p>
+
+       <a href="#signup-form-section"
+   class="signup-choice-button"
+   id="open-signup-form">
+    ЗАПОВНИТИ ФОРМУ
+</a>
+
+        <a href="https://www.instagram.com/1uaboxing/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="signup-choice-button instagram-choice">
+            ЗАПИСАТИСЯ ЧЕРЕЗ INSTAGRAM
+        </a>
+
+    </div>
+
+</div>
+
+<!-- ШАПКА САЙТУ -->
+<header class="header">
+    <div class="container header-content">
+
+
+<a href="/" class="logo">
+
+<img src="{% static 'main/images/club-logo.jpeg' %}"
+     alt="Логотип 1UA BOXING"
+     class="club-logo">
+
+  </a>
+
+
+        <nav class="navigation"
+             aria-label="Основна навігація">
+            <a href="#home">Головна</a>
+            <a href="#about">Про клуб</a>
+            <a href="#training">Тренування</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- ГОЛОВНИЙ ЕКРАН -->
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <!-- ТЕКСТ ЛІВОРУЧ -->
+            <div class="hero-text">
+
+                <p class="hero-label">
+                    Боксерський клуб у Білогородці
+                </p>
+
+                <h1>1UA BOXING</h1>
+
+                <h2>
+                    СИЛА. ХАРАКТЕР. ПЕРЕМОГА.
+                </h2>
+
+                <p class="hero-description">
+                    Бокс для дітей та дорослих.
+                    Індивідуальні та групові тренування.
+                </p>
+
+                <a href="#signup-choice" class="hero-button">
+                    ЗАПИСАТИСЯ НА ТРЕНУВАННЯ
+                </a>
+
+            </div>
+
+            <!-- ФОТОСЛАЙДЕР ПРАВОРУЧ -->
+            <div class="hero-image">
+
+                <div class="hero-slider"
+                     aria-label="Фотографії боксерського клубу">
+
+                    <img class="slide"
+                         src="{% static 'main/images/slide1.jpeg' %}"
+                         alt="Боксерський клуб 1UA Boxing">
+
+                    <img class="slide"
+                         src="{% static 'main/images/slide2.jpeg' %}"
+                         alt="Боксерський ринг клубу">
+
+                    <img class="slide"
+                         src="{% static 'main/images/slide3.jpeg' %}"
+                         alt="Тренувальна зала клубу">
+
+                    <img class="slide"
+                         src="{% static 'main/images/slide4.jpeg' %}"
+                         alt="Обладнання для боксу">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ПРО КЛУБ -->
+
+<section class="placeholder-section" id="about">
+    <div class="container">
+
+        <h2>Про наш клуб</h2>
+
+        <p>
+            Наш клуб був заснований у 2021 році небайдужими ветеранами боксу.
+            На жаль повномасштабне вторгнення завадило реалізувати нашу мрію
+            в плановій строки. Повноцінно наш клуб почав роботу у вересні 2026.
+            На даний момент ми зробили все можливе щоб тренування були не тільки
+            ефективними, а й проходили в комфортних умовах. До ваших послуг
+            саме сучасне обладнання від провідних виробників, а також
+            професійний тренерський склад. Мета «1UA BOXING CLUB» — зробити
+            бокс доступним та допомогти кожному розвинути силу, витривалість,
+            техніку та впевненість у собі. Наша місія — популяризувати бокс
+            як шлях до фізичного й особистісного розвитку, створюючи безпечну,
+            дружню та мотивуючу атмосферу для дітей і дорослих. Ми проводимо
+            тренування з урахуванням досвіду та інновацій всесвітньої
+            боксерської спільноти, слідкуємо за прогресом, йдемо шляхом
+            безперервного розвитку!
+        </p>
+
+    </div>
+</section>
+
+
+
+
+<div class="advantages-grid" id="training">
+
+    <!-- КАРТКА 01 -->
+    <div class="advantage-card" onclick="location.href='#training-details'" style="cursor: pointer;">
+        <div class="advantage-photo">
+            <span class="advantage-number"></span>
+            <img src="{% static 'main/images/gloves.jpeg' %}"
+                 alt="Боксерські рукавички 1UA BOXING">
+            <span class="photo-hint">Дізнатися більше →</span>
+        </div>
+
+        <div class="advantage-info">
+            <h3>Для дітей та дорослих</h3>
+            <p>
+                Бокс підходить для різних вікових груп.
+                Допомагає розвивати витривалість,
+                дисципліну та впевненість у собі.
+            </p>
+        </div>
+    </div>
+
+    <!-- КАРТКА 02 -->
+    <div class="advantage-card" onclick="location.href='#group-training-prices'" style="cursor: pointer;">
+        <div class="advantage-photo">
+            <span class="advantage-number"></span>
+            <img src="{% static 'main/images/group-training.jpeg' %}"
+                 alt="Групові тренування 1UA BOXING">
+            <span class="photo-hint">Переглянути ціни →</span>
+        </div>
+
+        <div class="advantage-info">
+            <h3>Групові тренування</h3>
+            <p>
+                Тренуйтеся разом з іншими учасниками.
+                Підтримка, мотивація та дружня атмосфера.
+            </p>
+        </div>
+    </div>
+
+    <!-- КАРТКА 03 -->
+    <div class="advantage-card" onclick="location.href='#individual-training-prices'" style="cursor: pointer;">
+        <div class="advantage-photo">
+
+
+<img src="{% static 'main/images/individual-training.jpeg' %}"
+     alt="Індивідуальні заняття 1UA BOXING">
+            <span class="photo-hint">Переглянути ціни →</span>
+
+        </div>
+
+        <div class="advantage-info">
+            <h3>Індивідуальні заняття</h3>
+            <p>
+                Персональний підхід до ваших цілей.
+                Тренування з урахуванням рівня підготовки.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+    <!-- ПОЛНЫЙ ТЕКСТ О ТРЕНИРОВКАХ -->
+<section id="training-details" class="placeholder-section">
+    <div class="container">
+        <h2>Про тренування</h2>
+
+        <p>
+            «1UA BOXING CLUB» — це клуб для тих, хто прагне
+            розвивати силу, витривалість і характер.
+            Ми поєднуємо професійний підхід до боксу
+            з дружньою атмосферою, допомагаючи кожному
+            вдосконалювати фізичну форму, техніку
+            та впевненість у собі.
+            Ми проводимо як групові, так персональні
+            тренування, для дорослих і дітей від 6 років.
+            Долучаючись до нашої команди незалежно від віку
+            і поточної фізичної форми та досвіду, ви гарантовано
+            отримаєте результати в самі короткі терміни.
+            Пам’ятайте: не треба бути самим кращим,
+            головне стати краще ніж вчора.
+            Ми не можемо обіцяти, що буде легко
+            і зробимо з вас олімпійських чемпіонів,
+            але гарантуємо, що навчимо захистити себе
+            і своїх близьких.
+            Навіть якщо ви ніколи не займались боксом,
+            не вагайтесь і приходьте вже сьогодні!
+            Чекаємо на вас!
+        </p>
+    </div>
+</section>
+    <!-- ВАРТІСТЬ ГРУПОВИХ ТРЕНУВАНЬ -->
+<section id="group-training-prices" style="padding: 60px 20px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+
+        <h2>Групові тренування</h2>
+
+        <p style="font-size: 18px; line-height: 1.9; margin-top: 25px;">
+            Тренуйтеся в команді, де кожен підтримує та мотивує
+            один одного! Групові заняття — це поєднання
+            ефективних тренувань, командного духу
+            та дружньої атмосфери.
+        </p>
+
+        <p style="font-size: 18px; line-height: 1.9;">
+            Розвивайте силу, витривалість, техніку боксу
+            та впевненість у собі разом із нами.
+        </p>
+
+        <div style="background: #f7f7f7; border-radius: 16px;
+                    padding: 35px 25px; margin: 35px auto;
+                    max-width: 600px;">
+
+            <h3 style="margin-bottom: 25px;">Вартість тренувань</h3>
+
+            <p style="font-size: 21px; margin-bottom: 20px;">
+                Місячний абонемент
+                <br>
+                <strong style="color: #b92530; font-size: 32px;">
+                    3 000 грн
+                </strong>
+            </p>
+
+            <p style="font-size: 21px;">
+                Разове тренування
+                <br>
+                <strong style="color: #b92530; font-size: 28px;">
+                    300 грн
+                </strong>
+            </p>
+
+        </div>
+
+        <p style="font-size: 18px; line-height: 1.8;">
+            Приєднуйтеся до команди 1UA BOXING —
+            ставайте сильнішими з кожним тренуванням!
+        </p>
+
+    </div>
+</section>
+    <!-- ІНДИВІДУАЛЬНІ ТРЕНУВАННЯ -->
+<section id="individual-training-prices" style="padding: 60px 20px;">
+    <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+
+        <h2>Індивідуальні заняття</h2>
+
+        <p style="font-size: 18px; line-height: 1.9; margin-top: 25px;">
+            Бажаєте тренуватися у власному темпі та приділити
+            максимум уваги своїм цілям? Індивідуальні заняття —
+            це можливість зосередитися на техніці боксу,
+            фізичній підготовці та особистому прогресі.
+        </p>
+
+        <p style="font-size: 18px; line-height: 1.9;">
+            Тренер підбирає навантаження відповідно до вашого
+            рівня підготовки, допомагає вдосконалювати навички
+            та впевнено рухатися вперед.
+        </p>
+
+        <div style="background: #f7f7f7; border-radius: 16px;
+                    padding: 35px 25px; margin: 35px auto;
+                    max-width: 600px;">
+
+            <h3 style="margin-bottom: 25px;">Вартість тренувань</h3>
+
+            <p style="font-size: 21px; margin-bottom: 20px;">
+                Індивідуальне тренування
+                <br>
+                <strong style="color: #b92530; font-size: 32px;">
+                    800 грн
+                </strong>
+            </p>
+
+            <p style="font-size: 21px;">
+                Спліт-тренування (для двох)
+                <br>
+                <strong style="color: #b92530; font-size: 28px;">
+                    1 400 грн
+                </strong>
+            </p>
+
+        </div>
+
+        <p style="font-size: 18px; line-height: 1.8;">
+            Ваш темп. Ваші цілі. Ваш результат.
+            Разом із 1UA BOXING!
+        </p>
+
+    </div>
+</section>
+
+    <!-- КОНТАКТИ -->
+<section class="contacts" id="contacts">
+    <div class="container">
+
+
+<!-- ФОРМА ЗАПИСУ НА ТРЕНУВАННЯ -->
+<div class="signup-section" id="signup-form-section" hidden>
+
+    <h2>Записатися на тренування</h2>
+
+    <p>
+        Залиште заявку, і ми зв’яжемося з вами,
+        щоб узгодити зручний час тренування.
+    </p>
+
+    <form id="signup-form"
+          action="{% url 'training_signup' %}"
+          method="post">
+
+        {% csrf_token %}
+
+        <label for="signup-name">Ваше ім’я</label>
+        <input type="text"
+               id="signup-name"
+               name="name"
+               placeholder="Введіть ваше ім’я"
+               maxlength="100"
+               required>
+
+        <label for="signup-phone">Номер телефону</label>
+        <input type="tel"
+               id="signup-phone"
+               name="phone"
+               placeholder="+380..."
+               maxlength="30"
+               required>
+
+        <label for="signup-training">Тип тренування</label>
+        <select id="signup-training"
+                name="training"
+                required>
+            <option value="">Оберіть тренування</option>
+            <option value="Групове">Групове тренування</option>
+            <option value="Індивідуальне">Індивідуальне тренування</option>
+            <option value="Консультація">Потрібна консультація</option>
+        </select>
+
+        <button type="submit" class="signup-button">
+            НАДІСЛАТИ ЗАЯВКУ
+        </button>
+
+        <p id="signup-message"
+           role="status"
+           aria-live="polite"></p>
+
+    </form>
+
+</div>
+
+
+        <h2>Контакти</h2>
+
+       <p>
+    📍 <a href="https://maps.app.goo.gl/swqRMLTYiNgfMi556?g_st=ic"
+          target="_blank"
+          rel="noopener noreferrer">
+        Білогородка, вул. Володимирська, 121
+    </a>
+</p>
+
+        <p>
+            📞 <a href="tel:+380686433320">
+                +380 68 643 33 20
+            </a>
+        </p>
+
+        <p>
+            📸 Instagram:
+            <a href="https://www.instagram.com/1uaboxing/"
+               target="_blank"
+               rel="noopener noreferrer">
+                @1uaboxing
+            </a>
+        </p>
+
+
+
+    </div>
+</section>
+
+
+</main>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('signup-form');
+    const message = document.getElementById('signup-message');
+
+    if (!form || !message) return;
+
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const button = form.querySelector('button[type="submit"]');
+
+        button.disabled = true;
+        button.textContent = 'НАДСИЛАЄМО...';
+
+        message.textContent = '';
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form)
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || !result.success) {
+                throw new Error(
+                    result.error || 'Не вдалося надіслати заявку.'
+                );
+            }
+
+            message.textContent =
+                '✅ Дякуємо! Ваша заявка надіслана. Ми скоро з вами зв’яжемося.';
+
+            message.style.color = '#218838';
+
+            form.reset();
+
+        } catch (error) {
+            message.textContent =
+                '❌ ' + (error.message || 'Спробуйте ще раз пізніше.');
+
+            message.style.color = '#d62828';
+
+        } finally {
+            button.disabled = false;
+            button.textContent = 'НАДІСЛАТИ ЗАЯВКУ';
+        }
+    });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const openButton = document.getElementById('open-signup-form');
+    const formSection = document.getElementById('signup-form-section');
+
+    if (openButton && formSection) {
+        openButton.addEventListener('click', function () {
+            formSection.hidden = false;
+        });
+    }
+});
+</script>
+</body>
+</html>
