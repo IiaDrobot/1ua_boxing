@@ -15,7 +15,7 @@
 <meta name="keywords" content="1UA BOXING, бокс Білогородка, бокс Київ, секція боксу Київ, бокс для дітей Київ, боксерський клуб Білогородка, групові тренування з боксу, індивідуальні тренування з боксу">
 
     <link rel="stylesheet"
-          href="{% static 'main/css/style.css' %}?v=5">
+          href="{% static 'main/css/style.css' %}?v=6">
 </head>
 
 <body>
@@ -166,7 +166,8 @@
 <div class="advantages-grid" id="training">
 
     <!-- КАРТКА 01 -->
-    <div class="advantage-card" onclick="location.href='#training-details'" style="cursor: pointer;">
+
+    <div class="advantage-card" onclick="showTrainingDetails('training-details')" style="cursor: pointer;">
         <div class="advantage-photo">
             <span class="advantage-number"></span>
             <img src="{% static 'main/images/gloves.jpeg' %}"
@@ -185,7 +186,7 @@
     </div>
 
     <!-- КАРТКА 02 -->
-    <div class="advantage-card" onclick="location.href='#group-training-prices'" style="cursor: pointer;">
+   <div class="advantage-card" onclick="showTrainingDetails('group-training-prices')" style="cursor: pointer;">
         <div class="advantage-photo">
             <span class="advantage-number"></span>
             <img src="{% static 'main/images/group-training.jpeg' %}"
@@ -203,7 +204,7 @@
     </div>
 
     <!-- КАРТКА 03 -->
-    <div class="advantage-card" onclick="location.href='#individual-training-prices'" style="cursor: pointer;">
+    <div class="advantage-card" onclick="showTrainingDetails('individual-training-prices')" style="cursor: pointer;">
         <div class="advantage-photo">
 
 
@@ -225,7 +226,7 @@
 </div>
 
     <!-- ПОЛНЫЙ ТЕКСТ О ТРЕНИРОВКАХ -->
-<section id="training-details" class="placeholder-section">
+<section id="training-details" class="placeholder-section" hidden>
     <div class="container">
         <h2>Про тренування</h2>
 
@@ -251,10 +252,17 @@
             не вагайтесь і приходьте вже сьогодні!
             Чекаємо на вас!
         </p>
+
+        <button type="button"
+        class="details-close-button"
+        onclick="showTrainingDetails('training-details')">
+    ✕ Закрити
+</button>
+
     </div>
 </section>
     <!-- ВАРТІСТЬ ГРУПОВИХ ТРЕНУВАНЬ -->
-<section id="group-training-prices" style="padding: 60px 20px;">
+<section id="group-training-prices" style="padding: 60px 20px;" hidden>
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
 
         <h2>Групові тренування</h2>
@@ -293,6 +301,12 @@
                 </strong>
             </p>
 
+            <button type="button"
+        class="details-close-button"
+        onclick="showTrainingDetails('group-training-prices')">
+    ✕ Закрити
+</button>
+
         </div>
 
         <p style="font-size: 18px; line-height: 1.8;">
@@ -303,7 +317,7 @@
     </div>
 </section>
     <!-- ІНДИВІДУАЛЬНІ ТРЕНУВАННЯ -->
-<section id="individual-training-prices" style="padding: 60px 20px;">
+<section id="individual-training-prices" style="padding: 60px 20px;" hidden>
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
 
         <h2>Індивідуальні заняття</h2>
@@ -349,6 +363,12 @@
             Ваш темп. Ваші цілі. Ваш результат.
             Разом із 1UA BOXING!
         </p>
+
+        <button type="button"
+        class="details-close-button"
+        onclick="showTrainingDetails('individual-training-prices')">
+    ✕ Закрити
+</button>
 
     </div>
 </section>
@@ -508,6 +528,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+</script>
+
+<script>
+function showTrainingDetails(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+        const wasHidden = section.hidden;
+
+        section.hidden = !wasHidden;
+
+        if (wasHidden) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
 </script>
 </body>
 </html>
