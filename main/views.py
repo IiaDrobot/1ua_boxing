@@ -91,3 +91,6 @@ def training_signup(request):
         'success': True,
         'message': 'Дякуємо! Ми скоро з вами зв’яжемося.',
     })
+
+def privacy(request):
+    return render(request, 'main/privacy.html')

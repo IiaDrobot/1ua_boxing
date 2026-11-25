@@ -15,7 +15,7 @@
 <meta name="keywords" content="1UA BOXING, бокс Білогородка, бокс Київ, секція боксу Київ, бокс для дітей Київ, боксерський клуб Білогородка, групові тренування з боксу, індивідуальні тренування з боксу">
 
     <link rel="stylesheet"
-          href="{% static 'main/css/style.css' %}?v=6">
+          href="{% static 'main/css/style.css' %}?v=8">
 </head>
 
 <body>
@@ -215,7 +215,7 @@
         </div>
 
         <div class="advantage-info">
-            <h3>Індивідуальні заняття</h3>
+            <h3>Персональні тренування</h3>
             <p>
                 Персональний підхід до ваших цілей.
                 Тренування з урахуванням рівня підготовки.
@@ -226,7 +226,7 @@
 </div>
 
     <!-- ПОЛНЫЙ ТЕКСТ О ТРЕНИРОВКАХ -->
-<section id="training-details" class="placeholder-section" hidden>
+<section id="training-details" class="placeholder-section boxing-details" hidden>
     <div class="container">
         <h2>Про тренування</h2>
 
@@ -252,7 +252,32 @@
             не вагайтесь і приходьте вже сьогодні!
             Чекаємо на вас!
         </p>
+    <div class="boxing-price-card" style="margin: 25px 0;">
 
+        <h3 style="color: #d71920; font-size: 24px; margin: 0 0 15px;">
+                    РОЗКЛАД ТРЕНУВАНЬ
+        </h3>
+
+        <p style="font-weight: bold; color: #222;">
+               Понеділок • Середа • П’ятниця
+        </p>
+
+    <div style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+        <strong style="color: #d71920;">19:30</strong>
+        — Дорослі
+    </div>
+
+    <div style="padding: 12px 0; border-bottom: 1px solid #ddd;">
+        <strong style="color: #d71920;">15:00</strong>
+        — Діти (1–5 клас)
+    </div>
+
+    <div style="padding: 12px 0;">
+        <strong style="color: #d71920;">10:00 та 17:30</strong>
+        — Юніори
+    </div>
+
+</div>
         <button type="button"
         class="details-close-button"
         onclick="showTrainingDetails('training-details')">
@@ -316,11 +341,11 @@
 
     </div>
 </section>
-    <!-- ІНДИВІДУАЛЬНІ ТРЕНУВАННЯ -->
+    <!-- ПЕРСОНАЛЬНI ТРЕНУВАННЯ -->
 <section id="individual-training-prices" style="padding: 60px 20px;" hidden>
     <div style="max-width: 900px; margin: 0 auto; text-align: center;">
 
-        <h2>Індивідуальні заняття</h2>
+        <h2>Персональні тренування</h2>
 
         <p style="font-size: 18px; line-height: 1.9; margin-top: 25px;">
             Бажаєте тренуватися у власному темпі та приділити
@@ -342,7 +367,7 @@
             <h3 style="margin-bottom: 25px;">Вартість тренувань</h3>
 
             <p style="font-size: 21px; margin-bottom: 20px;">
-                Індивідуальне тренування
+                    Персональне тренування
                 <br>
                 <strong style="color: #b92530; font-size: 32px;">
                     800 грн
@@ -356,7 +381,13 @@
                     1 400 грн
                 </strong>
             </p>
-
+            <p style="margin: 20px 0; font-size: 20px;">
+                Послуга спаринг-партнера
+                <br>
+            <strong style="color: #bd202e; font-size: 28px;">
+                    1 500 грн
+                 </strong>
+            </p>
         </div>
 
         <p style="font-size: 18px; line-height: 1.8;">
@@ -419,7 +450,24 @@
             <option value="Індивідуальне">Індивідуальне тренування</option>
             <option value="Консультація">Потрібна консультація</option>
         </select>
+    <div style="display: flex; align-items: flex-start; gap: 10px; margin: 20px 0;">
+    <input type="checkbox"
+           id="privacy-consent"
+           name="privacy_consent"
+           value="yes"
+           required
+           style="width: 18px; height: 18px; min-width: 18px; margin: 3px 0 0; accent-color: #e53935; cursor: pointer;">
 
+    <label for="privacy-consent"
+           style="font-size: 14px; color: #333; font-weight: 400; line-height: 1.5; margin: 0; text-transform: none;">
+        Я погоджуюся на обробку моїх персональних даних відповідно до
+        <a href="{% url 'privacy' %}"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color: #e53935; text-decoration: underline;">
+            Політики конфіденційності</a>.
+    </label>
+    </div>
         <button type="submit" class="signup-button">
             НАДІСЛАТИ ЗАЯВКУ
         </button>
@@ -548,5 +596,15 @@ function showTrainingDetails(sectionId) {
     }
 }
 </script>
+<footer style="background: #111; text-align: center; padding: 25px 15px; border-top: 1px solid #333;">
+    <p style="color: #999; font-size: 14px;">
+        © 2026 1UA BOXING. Всі права захищені.
+    </p>
+
+    <a href="{% url 'privacy' %}"
+       style="color: #e53935; font-size: 14px; text-decoration: underline;">
+        Політика конфіденційності
+    </a>
+</footer>
 </body>
 </html>

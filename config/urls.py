@@ -1,11 +1,10 @@
-
 from django.contrib import admin
 from django.urls import path
-from main.views import home, training_signup
+from main.views import home, training_signup, privacy
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('signup/', training_signup, name='training_signup'),
+    path('privacy/', privacy, name='privacy'),
 ]
-

@@ -1161,3 +1161,302 @@ body {
 .details-close-button:active {
     transform: scale(0.97);
 }
+
+/* Спортивное оформление блоков 1UA BOXING */
+
+.boxing-details {
+    background:
+        radial-gradient(ellipse at top right,
+            rgba(210, 20, 35, 0.35), transparent 55%),
+        linear-gradient(135deg, #08090c, #202027, #09090c);
+    color: #ffffff !important;
+    padding: 55px 20px !important;
+    border-top: 3px solid #d71920;
+    border-bottom: 3px solid #d71920;
+}
+
+.boxing-details h2 {
+    color: #ffffff !important;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(24px, 4vw, 36px) !important;
+    font-weight: 900;
+    text-shadow: 2px 3px 8px #000;
+}
+
+.boxing-details p {
+    color: #eeeeee !important;
+    line-height: 1.8;
+}
+
+.boxing-price-card {
+    background: linear-gradient(145deg, #242429, #101014) !important;
+    border: 2px solid #d71920 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 0 25px rgba(215, 25, 32, 0.35);
+    padding: 30px 20px !important;
+}
+
+.boxing-price-card h3 {
+    background: linear-gradient(110deg, #850009, #e52229, #850009);
+    color: #ffffff !important;
+    padding: 14px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.boxing-price-card strong {
+    color: #ffcc33 !important;
+    font-size: 30px !important;
+    text-shadow: 0 0 12px rgba(255, 204, 51, 0.25);
+}
+
+.boxing-details .details-close-button {
+    background: linear-gradient(135deg, #ed202b, #90000a);
+    border: 1px solid #ff4b4b;
+    box-shadow: 0 0 15px rgba(215, 25, 32, 0.4);
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .boxing-details {
+        padding: 30px 15px !important;
+    }
+
+    .boxing-price-card {
+        padding: 20px 15px !important;
+    }
+}
+
+/* Фон с боксерской перчаткой */
+#training-details {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+    ), url("../images/boxing-bg.png") center / cover no-repeat !important;
+}
+/* Расписание без рамки и отдельного фона */
+#training-details .boxing-price-card {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#training-details .boxing-price-card h3 {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+}
+/* Оформление расписания */
+#training-details .boxing-price-card > div {
+    font-size: 24px !important;
+    font-weight: 600;
+    color: #ffffff !important;
+}
+
+#training-details .boxing-price-card strong::before {
+    content: "◷";
+    color: #ffffff;
+    font-size: 30px;
+    margin-right: 12px;
+}
+/* Дни недели по центру */
+#training-details .boxing-price-card > p {
+    text-align: center !important;
+    font-size: 24px !important;
+    font-weight: 700;
+}
+
+/* Компактное оформление блока */
+#training-details {
+    padding: 25px 15px !important;
+}
+
+#training-details h2 {
+    margin: 0 0 18px !important;
+    font-size: 34px !important;
+}
+
+#training-details p {
+    font-size: 18px;
+    line-height: 1.5 !important;
+    margin-bottom: 12px !important;
+}
+
+#training-details .boxing-price-card {
+    margin: 15px auto !important;
+    padding: 10px 15px !important;
+    max-width: 850px;
+}
+
+#training-details .boxing-price-card h3 {
+    margin: 0 0 12px !important;
+    padding: 5px !important;
+}
+
+#training-details .boxing-price-card > div {
+    padding: 8px 0 !important;
+}
+
+#training-details .details-close-button {
+    margin: 15px auto 0 !important;
+}
+
+/* Расписание на телефоне */
+@media (max-width: 600px) {
+    #training-details .boxing-price-card {
+        padding: 10px 0 !important;
+    }
+
+    #training-details .boxing-price-card > p {
+        font-size: 18px !important;
+    }
+
+    #training-details .boxing-price-card > div {
+        text-align: center;
+        font-size: 20px !important;
+        padding: 12px 0 !important;
+    }
+
+    #training-details .boxing-price-card strong {
+        display: block;
+        font-size: 26px !important;
+    }
+}
+
+/* Фон групповых тренировок */
+#group-training-prices {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+    ), url("../images/boxing-bg.png") center / cover no-repeat !important;
+    color: #ffffff !important;
+}
+
+#group-training-prices h2 {
+    color: #ffffff !important;
+    text-align: center;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+/* Прозрачный блок стоимости */
+#group-training-prices > div > div {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Описание групповых тренировок */
+#group-training-prices > div > p {
+    max-width: 800px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    line-height: 1.6 !important;
+}
+
+/* Яркие цены */
+#group-training-prices strong,
+#group-training-prices [style*="color: #b92530"] {
+    color: #ffcc33 !important;
+    font-size: 36px !important;
+    font-weight: 900 !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Оформление персональных тренировок */
+
+#individual-training-prices {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.35),
+        rgba(0, 0, 0, 0.35)
+    ), url("../images/boxing-bg.png")
+    center / cover no-repeat !important;
+
+    color: #ffffff !important;
+}
+
+#individual-training-prices div {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+#individual-training-prices h2,
+#individual-training-prices h3 {
+    color: #ffffff !important;
+}
+
+#individual-training-prices p {
+    color: #ffffff !important;
+    max-width: 850px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    line-height: 1.6;
+}
+
+#individual-training-prices strong {
+    color: #ffcc33 !important;
+    font-size: 40px !important;
+    font-weight: 900 !important;
+}
+
+@media (max-width: 600px) {
+    #individual-training-prices strong {
+        font-size: 30px !important;
+    }
+}
+/* Компактный блок персональных тренировок */
+
+#individual-training-prices {
+    padding: 30px 15px !important;
+}
+
+#individual-training-prices h2 {
+    margin-bottom: 15px !important;
+}
+
+#individual-training-prices h3 {
+    margin: 15px 0 !important;
+}
+
+#individual-training-prices div {
+    padding: 10px !important;
+    margin-top: 10px !important;
+}
+
+#individual-training-prices p {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    line-height: 1.4 !important;
+}
+
+#individual-training-prices strong {
+    font-size: 34px !important;
+}
+
+#individual-training-prices .details-close-button {
+    margin: 15px auto 0 !important;
+}
+
+@media (max-width: 600px) {
+    #individual-training-prices strong {
+        font-size: 28px !important;
+    }
+}
+/* Фон для мобильной версии */
+
+@media (max-width: 600px) {
+    #training-details,
+    #group-training-prices,
+    #individual-training-prices {
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ), url("../images/boxing-mobile.png")
+        center / 100% 100% no-repeat !important;
+    }
+}
+
